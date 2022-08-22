@@ -13,22 +13,15 @@ namespace Homework1_2_9
             Random random = new Random();
             int rangeNumberBegin = 1;
             int rangeNumberEnd = 27;
-            int rangeThreeDigitNumbersBegin = 100;
-            int rangeThreeDigitNumbersEnd = 999;
+            int rangeNumbersBegin = 0;
+            int rangeNumbersEnd = 999;
             int countDivisible = 0;
+            int startCheck = 100;
             int number = random.Next(rangeNumberBegin , rangeNumberEnd +1);
-            int potentialDivisible;
 
-            for (int i = rangeThreeDigitNumbersBegin; i <= rangeThreeDigitNumbersEnd; i++)
+            for (int i = rangeNumbersBegin; i <= rangeNumbersEnd; i+=number)
             {
-                potentialDivisible = i;
-
-                while (potentialDivisible>0)
-                {
-                    potentialDivisible-=number;
-                }
-
-                if (potentialDivisible==0)
+                if (i>=startCheck)
                 {
                     countDivisible++;
                 }
